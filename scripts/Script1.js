@@ -28,7 +28,8 @@ const overloop = () => {
   input.setAttribute("name", "Text",);
   input.setAttribute("id", "input");
   input.setAttribute("placeholder", "Vul hier een naam in");
-  button.setAttribute("id", "");
+  button.setAttribute("id", "controleer");
+  button.setAttribute("placeholder", "Controleer")
   div.appendChild(input);
 }
 
