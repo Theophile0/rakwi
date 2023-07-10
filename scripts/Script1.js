@@ -15,8 +15,8 @@ let namen =[
 ];
 
 const setup = () => {
-let image = document.getElementById("logo");
-image.addEventListener("click", overloop);
+    controleerbtn = document.getElementById("controleer");
+
 }
 const overloop = () => {
   let div = document.getElementById("divke");

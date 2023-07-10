@@ -1,12 +1,22 @@
 ﻿body
 {
-    background-image: url("images/DeMolLogo.png");
+    background-image: url("../images/DeMolLogo.png");
     margin: 0;
     overflow: hidden;
+    height: 1000px;
+
 }
 img{
     margin: 0 auto 0 auto;
 }
 div{
     margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#inputText{
+
 }
