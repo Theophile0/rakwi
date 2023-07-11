@@ -16,18 +16,33 @@ let namen =[
 
 const setup = () => {
     controleerbtn = document.getElementById("controleer");
-
+    controleerbtn.addEventListener("click", controleer);
 }
 const controleer = () => {
-    let naam = document.getElementById("inputText");
+    let name = document.getElementById("inputText").value;
+    let body = document.getElementsByTagName("body");
     for (let i = 0; i < namen.length; i++) {
-        if (namen[i].naam === naam){
+        if (namen[i].naam === name){
             if(namen[i].rood === true){
+                body[0].style.backgroundImage = "url(\"../images/images.jpg\")";
+                hideInput();
+                let naam = document.createElement("div");
+                naam.appendChild(document.createTextNode(name));
+                naam.setAttribute("id", "naam");
+                body[0].appendChild(naam);
+            }
+            else{
 
             }
         }
     }
 
+}
+const hideInput = () => {
+    let input = document.createElement("input");
+    let button = document.createElement("button");
+    input.style.display = "none";
+    button.style.display = "none";
 }
 const terugOrigineel = () => {
     let div = document.getElementById("divke");
