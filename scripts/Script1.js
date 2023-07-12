@@ -41,7 +41,7 @@ const controleer = () => {
 const hideInput = () => {
     let input = document.createElement("input");
     let button = document.createElement("button");
-    input.style.display = "none";
+    input.setAttribute("type", "hidden")
     button.style.display = "none";
 }
 const terugOrigineel = () => {
