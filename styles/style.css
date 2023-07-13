@@ -4,13 +4,15 @@
     margin: 0;
     overflow: hidden;
     width: 1000px;
+    font-family: Calibri, sans-serif;
 
 }
 img{
     margin: 0 auto 0 auto;
 }
 #naam{
-    font-size: 800%;
+    font-size: 200px;
+    margin: auto;
 }
 div{
     margin-top: 50px;
