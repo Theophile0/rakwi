@@ -24,7 +24,7 @@ const controleer = () => {
     for (let i = 0; i < namen.length; i++) {
         if (namen[i].naam === name){
             if(namen[i].rood === true){
-                body[0].style.backgroundImage = "url(\"../images/rood.png\")";
+                body[0].style.backgroundImage = 'url("/images/rood.png")';
                 hideInput();
                 let naam = document.createElement("div");
                 naam.appendChild(document.createTextNode(name));
@@ -34,7 +34,7 @@ const controleer = () => {
                 body[0].appendChild(naam);
             }
             else{
-                body[0].style.backgroundImage = "url(\"../images/groen.jpg\")";
+                body[0].style.backgroundImage = 'url("/images/groen.jpg")';
                 hideInput();
                 let naam = document.createElement("div");
                 naam.appendChild(document.createTextNode(name));
