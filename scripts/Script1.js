@@ -66,7 +66,6 @@ const terugOrigineel = () => {
     button.setAttribute("id", "controleer");
     button.setAttribute("placeholder", "Controleer")
     div.appendChild(input);
-    div.appendChild(button);
 }
 
 window.addEventListener("load", setup);
