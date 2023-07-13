@@ -2,10 +2,9 @@
 {
     background-image: url("../images/DeMolLogo.png");
     margin: 0;
-    overflow: hidden;
     width: 1000px;
     font-family: Calibri, sans-serif;
-
+    background-repeat: no-repeat;
 }
 img{
     margin: 0 auto 0 auto;

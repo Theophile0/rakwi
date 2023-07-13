@@ -29,6 +29,8 @@ const controleer = () => {
                 let naam = document.createElement("div");
                 naam.appendChild(document.createTextNode(name));
                 naam.setAttribute("id", "naam");
+                body[0].style.color = "white";
+                body[0].style.backgroundRepeat = "no-repeat";
                 body[0].appendChild(naam);
             }
             else{
@@ -38,6 +40,8 @@ const controleer = () => {
                 naam.appendChild(document.createTextNode(name));
                 naam.setAttribute("id", "naam");
                 body[0].appendChild(naam);
+                body[0].style.backgroundRepeat = "no-repeat";
+
             }
         }
     }
