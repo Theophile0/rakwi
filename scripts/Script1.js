@@ -21,14 +21,21 @@ const setup = () => {
 const controleer = () => {
     let name = document.getElementById("inputText").value;
     let body = document.getElementsByTagName("body");
+    let superdiv = document.getElementById("superdiv");
     for (let i = 0; i < namen.length; i++) {
         if (namen[i].naam === name){
             if(namen[i].rood === true){
                 body[0].style.backgroundImage = 'url("/images/rood.png")';
                 hideInput();
+
+                //De naam van de persoon in het groot wit centraaal op het scherm plaatsen.
                 let naam = document.createElement("div");
                 naam.appendChild(document.createTextNode(name));
                 naam.setAttribute("id", "naam");
+                let molImg = document.createElement("img");
+                molImg.setAttribute("src", "/images/rood.png");
+                molImg.appendChild(naam );
+                superdiv.appendChild(molImg);
                 body[0].style.color = "white";
                 body[0].style.backgroundRepeat = "no-repeat";
                 body[0].appendChild(naam);
