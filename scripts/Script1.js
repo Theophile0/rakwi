@@ -15,51 +15,71 @@ let namen =[
 ];
 
 const setup = () => {
-    controleerbtn = document.getElementById("controleer");
-    controleerbtn.addEventListener("click", controleer);
+   let  controleerbtn = document.getElementById("controleer");
+    controleerbtn.addEventListener("click", controleer2);
 }
-const controleer = () => {
-    let name = document.getElementById("inputText").value;
-    let body = document.getElementsByTagName("body");
+// const controleer = () => {
+//     let name = document.getElementById("inputText").value;
+//     let body = document.getElementsByTagName("body");
+//     let superdiv = document.getElementById("superdiv");
+//     for (let i = 0; i < namen.length; i++) {
+//         if (namen[i].naam === name){
+//             if(namen[i].rood === true){
+//                 body[0].style.backgroundImage = 'url("/images/rood.png")';
+//                 hideInput();
+//
+//                 //De naam van de persoon in het groot wit centraaal op het scherm plaatsen.
+//                 let naam = document.createElement("div");
+//
+//                 naam.appendChild(document.createTextNode(name));
+//                 naam.setAttribute("id", "naam");
+//                 let molImg = document.createElement("img");
+//                 molImg.setAttribute("src", "../images/rood.png");
+//                 superdiv.style.color = "white";
+//                 superdiv.style.backgroundRepeat = "no-repeat";
+//                 molImg.appendChild(naam);
+//                 superdiv.appendChild(molImg);
+//
+//             }
+//             else{
+//                 body[0].style.backgroundImage = 'url("/images/groen.jpg")';
+//                 hideInput();
+//                 let naam = document.createElement("div");
+//                 naam.appendChild(document.createTextNode(name));
+//                 naam.setAttribute("id", "naam");
+//                 body[0].appendChild(naam);
+//                 body[0].style.backgroundRepeat = "no-repeat";
+//
+//             }
+//         }
+//     }
+//
+// }
+const controleer2 = () => {
     let superdiv = document.getElementById("superdiv");
+    let name = document.getElementById("inputText").value;
     for (let i = 0; i < namen.length; i++) {
-        if (namen[i].naam === name){
-            if(namen[i].rood === true){
-                body[0].style.backgroundImage = 'url("/images/rood.png")';
-                hideInput();
-
-                //De naam van de persoon in het groot wit centraaal op het scherm plaatsen.
-                let naam = document.createElement("div");
-                naam.appendChild(document.createTextNode(name));
-                naam.setAttribute("id", "naam");
-                let molImg = document.createElement("img");
-                molImg.setAttribute("src", "/images/rood.png");
-                molImg.appendChild(naam );
-                superdiv.appendChild(molImg);
-                body[0].style.color = "white";
-                body[0].style.backgroundRepeat = "no-repeat";
-                body[0].appendChild(naam);
+        if (namen[i].naam === name) {
+            hideInput();
+            let naam = document.createElement("div");
+            naam.appendChild(document.createTextNode(name));
+            naam.setAttribute("id", "naam");
+            superdiv.appendChild(naam);
+            if (namen[i].rood === true) {
+                superdiv.style.backgroundImage = 'url("images/rood.png")';
+            } else {
+                superdiv.style.backgroundImage = 'url("images/groen.jpg")';
             }
-            else{
-                body[0].style.backgroundImage = 'url("/images/groen.jpg")';
-                hideInput();
-                let naam = document.createElement("div");
-                naam.appendChild(document.createTextNode(name));
-                naam.setAttribute("id", "naam");
-                body[0].appendChild(naam);
-                body[0].style.backgroundRepeat = "no-repeat";
-
-            }
+            superdiv.className = "gecontroleerd";
         }
     }
 
 }
 const hideInput = () => {
-    let input = document.getElementById("inputText");
-    let button = document.getElementById("controleer");
-    input.style.display = "none";
-    button.style.display = "none";
+    let divke = document.getElementById("divke");
+    divke.style.display = "none";
 }
+
 const terugOrigineel = () => {
     let div = document.getElementById("divke");
 
